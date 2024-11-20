@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +10,312 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Custom Scrollbars */
+/* width */
+::-webkit-scrollbar {
+  /* for vertical scrollbars */
+  width: 0px;
+  /* for horizontal scrollbars  */
+  height: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 4px white; */
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 0px;
+  background: rgb(126, 126, 126);
+  border-radius: 10px;
+}
+
+/* <h4 className="text-center  text-7xl tracking-wider text-black">
+Welcome to Flashcard Creator!
+</h4>
+<h5 className="mt-4 text-center  text-4xl tracking-wider text-black">
+Easily upload your PDFs and let our AI transform them into
+interactive flashcards.
+</h5>
+<p className="mt-2 text-center  text-2xl tracking-wider text-black">
+Enhance your learning experience with personalized flashcards
+generated from your documents.
+</p>
+<p className="py-7 font-geist-sans font-medium text-zinc-500">
+I have 11 years of experience working on useful and mindful products
+together with startups and known brands
+</p> */
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+.root {
+  display: contents;
+}
+
+.noise {
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: 149.76px auto;
+  background-image: url(https://framerusercontent.com/images/6mcf62RlDfRfU61Yg5vb2pefpi4.png);
+  border: 0;
+  background-repeat: repeat;
+  background-position: left top;
+  z-index: -99;
+}
+
+.cover {
+  opacity: 1;
+  transform: none;
+  -webkit-mask: radial-gradient(
+      125% 100% at 0% 0%,
+      #000000 0%,
+      rgba(0, 0, 0, 0.22449) 88.28828828828829%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    add;
+  background: radial-gradient(
+    100% 100% at 0% 0%,
+    #ffffff 0%,
+    var(--token-aa303802-e5d1-4856-bfe5-30475052d91c, rgb(219, 219, 219)) 100%
+  );
+  flex: none;
+  height: 200vh;
+  left: 0;
+  mask: radial-gradient(
+      125% 100% at 0% 0%,
+      #000000 0%,
+      rgba(0, 0, 0, 0.22449) 88.28828828828829%,
+      rgba(0, 0, 0, 0) 100%
+    )
+    add;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -99;
+}
+
+.one {
+  transform: skewX(45deg) translateZ(0px);
+  -webkit-mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 20.036247184684683%,
+      rgba(0, 0, 0, 0) 36.17504222972973%,
+      rgb(0, 0, 0) 55.4054054054054%,
+      rgba(0, 0, 0, 0.13) 67.11711711711712%,
+      rgba(0, 0, 0, 1) 78.23057432432432%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgb(255, 255, 255) 83.93442622950819%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  flex: none;
+  height: 1269px;
+  left: calc(33.611111111111136% - min(960px, 591.04338305692px) / 2);
+  mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 20.036247184684683%,
+      rgba(0, 0, 0, 0) 36.17504222972973%,
+      rgb(0, 0, 0) 55.4054054054054%,
+      rgba(0, 0, 0, 0.13) 67.11711711711712%,
+      rgba(0, 0, 0, 1) 78.23057432432432%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  max-width: 960px;
+  overflow: hidden;
+  position: absolute;
+  top: -209px;
+  width: 591px;
+}
+
+.two {
+  transform: skewX(45deg) translateZ(0px);
+  -webkit-mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 11.398507882882884%,
+      rgb(0, 0, 0) 25.557784346846844%,
+      rgba(0, 0, 0, 0.55) 41.696579391891895%,
+      rgba(0, 0, 0, 0.13) 67.11711711711712%,
+      rgba(0, 0, 0, 1) 78.23057432432432%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgb(255, 255, 255) 83.93442622950819%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  flex: none;
+  height: 1269px;
+  left: calc(-1.5277777777777555% - min(960px, 582.0033895797204px) / 2);
+  mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 11.398507882882884%,
+      rgb(0, 0, 0) 25.557784346846844%,
+      rgba(0, 0, 0, 0.55) 41.696579391891895%,
+      rgba(0, 0, 0, 0.13) 67.11711711711712%,
+      rgba(0, 0, 0, 1) 78.23057432432432%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  max-width: 960px;
+  overflow: hidden;
+  position: absolute;
+  top: -209px;
+  width: 582px;
+}
+
+.three {
+  transform: skewX(45deg) translateZ(0px);
+  -webkit-mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 9.814893018018019%,
+      rgb(0, 0, 0) 20.036247184684683%,
+      rgba(0, 0, 0, 0.55) 28.58776745495496%,
+      rgba(0, 0, 0, 0.42462) 40.090090090090094%,
+      rgb(0, 0, 0) 48.64864864864865%,
+      rgba(0, 0, 0, 0.26749) 54.5045045045045%,
+      rgba(0, 0, 0, 0.13) 78.5789695945946%,
+      rgba(0, 0, 0, 1) 88.55398367117117%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgb(255, 255, 255) 67%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  flex: none;
+  height: 1269px;
+  left: calc(33.68055555555558% - min(960px, 441.23777686332323px) / 2);
+  mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 9.814893018018019%,
+      rgb(0, 0, 0) 20.036247184684683%,
+      rgba(0, 0, 0, 0.55) 28.58776745495496%,
+      rgba(0, 0, 0, 0.42462) 40.090090090090094%,
+      rgb(0, 0, 0) 48.64864864864865%,
+      rgba(0, 0, 0, 0.26749) 54.5045045045045%,
+      rgba(0, 0, 0, 0.13) 78.5789695945946%,
+      rgba(0, 0, 0, 1) 88.55398367117117%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  max-width: 960px;
+  overflow: hidden;
+  position: absolute;
+  top: -209px;
+  width: 441px;
+}
+
+.four {
+  transform: skewX(45deg) translateZ(0px);
+  -webkit-mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 17.659065315315313%,
+      rgba(0, 0, 0, 0.55) 26.641680743243246%,
+      rgb(0, 0, 0) 35.230152027027025%,
+      rgba(0, 0, 0, 0) 47.69847972972973%,
+      rgba(0, 0, 0, 0.13) 69.17757601351352%,
+      rgba(0, 0, 0, 1) 79.1455518018018%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgb(255, 255, 255) 83.93442622950819%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  flex: none;
+  height: 1269px;
+  left: calc(50.138888888888914% - min(960px, 683.5956972282517px) / 2);
+  mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 17.659065315315313%,
+      rgba(0, 0, 0, 0.55) 26.641680743243246%,
+      rgb(0, 0, 0) 35.230152027027025%,
+      rgba(0, 0, 0, 0) 47.69847972972973%,
+      rgba(0, 0, 0, 0.13) 69.17757601351352%,
+      rgba(0, 0, 0, 1) 79.1455518018018%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  max-width: 960px;
+  opacity: 0.6;
+  overflow: hidden;
+  position: absolute;
+  top: -209px;
+  width: 684px;
+}
+
+.five {
+  transform: skewX(45deg) translateZ(0px);
+  -webkit-mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 20.036247184684683%,
+      rgba(0, 0, 0, 0.55) 27.577773085585587%,
+      rgb(0, 0, 0) 42.34234234234234%,
+      rgba(0, 0, 0, 0) 48.60465934684685%,
+      rgba(0, 0, 0, 0.13) 67.11711711711712%,
+      rgba(0, 0, 0, 1) 74.95249155405406%,
+      rgb(0, 0, 0) 82.43243243243244%,
+      rgba(0, 0, 0, 0.4725) 88.671875%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgb(255, 255, 255) 83.93442622950819%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  flex: none;
+  height: 1269px;
+  left: calc(49.09722222222224% - min(960px, 426.1711210679905px) / 2);
+  mask: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 0, 0) 20.036247184684683%,
+      rgba(0, 0, 0, 0.55) 27.577773085585587%,
+      rgb(0, 0, 0) 42.34234234234234%,
+      rgba(0, 0, 0, 0) 48.60465934684685%,
+      rgba(0, 0, 0, 0.13) 67.11711711711712%,
+      rgba(0, 0, 0, 1) 74.95249155405406%,
+      rgb(0, 0, 0) 82.43243243243244%,
+      rgba(0, 0, 0, 0.4725) 88.671875%,
+      rgba(0, 0, 0, 0) 97.2972972972973%
+    )
+    add;
+  max-width: 960px;
+  opacity: 0.75;
+  overflow: hidden;
+  position: absolute;
+  top: -209px;
+  width: 426px;
 }
