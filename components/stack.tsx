@@ -1,32 +1,26 @@
 import React from "react";
-import Image from "next/image";
-import { Search } from "lucide-react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
 
-import takeoff from "@/public/assets/takeoff.jpg";
 import StackSheet from "./stack-sheet";
+import { RotateCcw } from "lucide-react";
+import { Button } from "./ui/button";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Stack() {
   return (
     <div>
-      <div className="relative my-6 flex w-[22rem] rounded-3xl shadow-lg shadow-zinc-300/50">
+      <div className="mt- relative flex w-[22rem] rounded-3xl shadow-lg shadow-zinc-300/50">
         {" "}
         <div className="min-h-40 w-full rounded-3xl border border-zinc-200 bg-white p-5 transition-all">
-          {/* <p className="text-center text-zinc-500">
-            How many cars are in your mother's purse if she first had 20 and now
-            I have about 32?
-          </p> */}
-          <div className="flex items-center justify-between">
-            <p className="ml- text- max-w-[70%] truncate font-semibold text-zinc-800">
+          <div className="flex flex-col">
+            <p className="ml- text- truncate font-semibold text-zinc-800">
               {" "}
               Meeting with Mr Jackson Attah Duah who was my teacher
             </p>
-            <p className="ml-2 text-xs font-semibold text-zinc-400">
+            <p className="my-2 text-xs font-semibold text-zinc-400">
               18-10-2021
             </p>
           </div>
-          <div className="my-4">
+          {/* <div className="my-4">
             <audio controls className="w-full opacity-70">
               <a
                 href="https://share.transistor.fm/s/0b397ae3"
@@ -82,9 +76,9 @@ export default function Stack() {
               </a>
               <source src="https://media.transistor.fm/0b397ae3/d045a402.mp3?src=player"></source>
             </audio>
-          </div>
+          </div> */}
           <div className="text-sm text-zinc-700">
-            <p className="pb-1 font-semibold text-zinc-700">Summary</p>
+            <p className="pb-1 font-semibold text-zinc-700">Question</p>
             <p className="text-zinc-600">
               Tailwind doesn't include pre-designed card components out of the
               box, but they're easy to build using existing utilities?
@@ -92,8 +86,10 @@ export default function Stack() {
           </div>
 
           <div className="mt-4 text-sm text-zinc-700">
-            <p className="pb-1 font-semibold text-zinc-700">Transcription</p>
-            <p className="mb-2 line-clamp-6 text-zinc-600">
+            <p className="pb-1 font-semibold text-zinc-700">
+              AI Generated Answer
+            </p>
+            <p className="line-clamp-4 text-zinc-600">
               The transcriptions API takes as input the audio file you want to
               transcribe and the desired output file format for the
               transcription of the audio. We currently support multiple input
@@ -106,10 +102,33 @@ export default function Stack() {
               since the output is not in the original input language and is
               instead translated to English text.
             </p>
+            {/* <span className="text-blue-400">read more</span> */}
             <StackSheet />
+          </div>
+          <div className="mt-4 text-sm text-zinc-700">
+            <p className="pb-2 font-semibold text-zinc-700">Add a comment</p>
+            {/* <li className="mb-2 line-clamp-6 text-zinc-600">
+              The transcriptions API takes as input the audio file you want to
+              transcribe and the desired output file.
+            </li> */}
+            <Textarea
+              className="mb-4 h-36 max-h-36 min-h-36 w-full rounded-xl border border-zinc-200 bg-zinc-100 focus-visible:ring-blue-600 disabled:opacity-100"
+              rows={5}
+              cols={10}
+            />
+            <Button variant={"secondary"} className="w-full rounded-full">
+              View all comments
+            </Button>
           </div>
         </div>
       </div>
+
+      {/* <div className="flex w-full items-center justify-center">
+        <Button variant={"ghost"} className="rounded-full hover:bg-zinc-200">
+          <RotateCcw size={16} className="" />
+          Refresh
+        </Button>
+      </div> */}
     </div>
   );
 }

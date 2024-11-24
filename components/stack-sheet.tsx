@@ -7,15 +7,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 
 export default function StackSheet() {
   return (
     <Sheet>
       <SheetTrigger>
-        <Button size={"sm"} className="mt-2 rounded-full">
-          Read more
-        </Button>
+        <span className="text-blue-400">read more</span>
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
